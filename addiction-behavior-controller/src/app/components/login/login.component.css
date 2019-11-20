@@ -1,0 +1,37 @@
+body{
+    text-rendering: optimizeLegibility;
+    color: #4a4a4a;
+    /* font-feature-settings: "liga" on; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+header{
+    text-align: center;
+}
+
+.label{
+
+/* text-align: left; */
+/* margin-left: 394px; to nie powinno byc w ten sposob bo to odstep od marigneus  */
+padding: 10px 0px;
+}
+
+ /* form{
+    text-align: center;
+    /* align-items: left; }*/
+
+
+
+form label {
+    display: block;
+}
+
+#formId{
+   margin-left: 45%;
+   margin-right: 35%;
+}
+

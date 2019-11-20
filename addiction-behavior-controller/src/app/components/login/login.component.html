@@ -3,20 +3,24 @@
 <body>
 <header>
     <h1>Witaj użytkowniku!</h1>
-    <h6> Zaloguj się by móc korzystać z aplikacji</h6>
+    <h4> Zaloguj się by móc korzystać z aplikacji</h4>
 </header>
-
+<div id="formId">
 <form [formGroup] = "loginForm" (ngSubmit)="onSubmit()">
     <div>
-        <label for="username">Login</label>
-        <input id="username" type="text" formControlName="username">
+        <label for="username" class="label">Username</label>
+        <input id="username" type="text" formControlName="username" class="input">
     </div>
     <div>
-        <label for="password">Password</label>
-        <input id="password" type="text" formControlName="password">
+        <label for="password" class="label">Password</label>
+        <input id="password" type="password" formControlName="password" class="input">
     </div>
+    <br>
     <button class="button" type = "submit">Zaloguj</button>
 
+    <p>Nie masz konta ? <a href="registration"> Zarejestruj się</a></p>
 </form>
+</div>
+
 
 </body>
