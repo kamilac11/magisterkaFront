@@ -1,1 +1,50 @@
-<p>register works!</p>
+
+<body>
+    <header>
+        <h1>Utwórz konto</h1>
+    </header>
+
+    <div id="formId">
+    <form [formGroup] = "registerForm"   (ngSubmit)="onSubmit()">
+        <div  class="form-group">
+
+            <label for="name" class="label">Imię</label>
+            <input id="name" type="text"  formControlName="name" class="form-control" maxlength=14> 
+            <div *ngIf="(registerForm.get('name').dirty || registerForm.get('name').touched) && registerForm.get('name').invalid && registerForm.get('name').errors.required">
+                To pole jest wymagane, nie może pozostać puste!
+            </div>
+            <div *ngIf="registerForm.get('name').invalid && registerForm.get('name').errors.pattern">
+               Pole to musi zaczynać się wielką literą i zawiera jedynie litery. 
+            </div>
+        </div>
+        <div>
+            <label for="lastName" class="label">Nazwisko</label>
+            <input id="lastName" type="text" formControlName="lastName" class="form-control" maxlength="20">
+            <div *ngIf="(registerForm.get('lastName').dirty || registerForm.get('lastName').touched) && registerForm.get('lastName').invalid && registerForm.get('lastName').errors.required">
+                To pole jest wymagane, nie może pozostać puste!
+            </div>
+            <div *ngIf="registerForm.get('lastName').invalid && registerForm.get('lastName').errors.pattern">
+                Pole to musi zaczynać się wielką literą i zawiera jedynie litery. 
+             </div>
+        </div>
+        <div>
+            <label for="username" class="label">Nazwa użytkownika</label>
+            <input id="username" type="text" formControlName="username" class="form-control" maxlength="14">
+            <div *ngIf="(registerForm.get('username').dirty || registerForm.get('username').touched) && registerForm.get('username').invalid && registerForm.get('username').errors.required">
+                To pole jest wymagane, nie może pozostać puste!
+            </div>
+        </div>
+        <div>
+            <label for="password" class="label">Hasło</label>
+            <input id="password" type="password" formControlName="password" class="input" maxlength="14">
+            <div *ngIf="(registerForm.get('password').dirty || registerForm.get('password').touched) && registerForm.get('password').invalid && registerForm.get('password').errors.required">
+                To pole jest wymagane, nie może pozostać puste!
+            </div>
+        </div>
+        <br>
+        <button class="button" id="signInButton" type = "submit" [disabled]="!registerForm.valid">Zarejestruj</button>
+    
+    </form>
+    </div>
+    
+    </body>

@@ -7,7 +7,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ActivityPanelComponent } from './components/activity-panel/activity-panel.component';
 import { AllUserAdminComponent } from './components/all-user-admin/all-user-admin.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { TestFormComponent } from './components/test-form/test-form.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     ActivityPanelComponent,
-    AllUserAdminComponent
+    AllUserAdminComponent,
+    TestFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

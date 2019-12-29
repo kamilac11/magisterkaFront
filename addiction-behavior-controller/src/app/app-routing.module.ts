@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { AllUserAdminComponent } from './components/all-user-admin/all-user-admin.component';
 import { RegisterComponent } from './components/register/register.component';
+import { TestFormComponent } from './components/test-form/test-form.component';
 
 
 const routes: Routes = [
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'admin', component: AllUserAdminComponent},
   { path: 'registration', component: RegisterComponent},
+  { path: 'test', component: TestFormComponent},
 ];
 
 @NgModule({

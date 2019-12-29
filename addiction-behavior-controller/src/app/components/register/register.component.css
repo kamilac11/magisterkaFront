@@ -1,0 +1,49 @@
+body{
+    text-rendering: optimizeLegibility;
+     color: #4a4a4a; 
+    /* font-feature-settings: "liga" on; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+header{
+    text-align: center;
+}
+
+.label{
+
+/* text-align: left; */
+/* margin-left: 394px; to nie powinno byc w ten sposob bo to odstep od marigneus  */
+padding: 10px 0px;
+}
+
+
+
+
+
+form label {
+    display: block;
+}
+
+ /* form{
+    text-align: center};
+ */
+
+#formId{
+   margin-left: 45%;
+   margin-right: 25%;
+}
+
+#signInButton{
+    text-align: center;
+}
+
+
+
+/* gdy wartosc pola bedzie nieprawidlowa i pole bedzie puste wtedy pole bedzie czerwne :not(form) nie caly form = bez tego not caly bylby czerwony */
+.ng-invalid.ng-touched:not(form) {
+    border-color: red;
+}
