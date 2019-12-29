@@ -11,12 +11,18 @@
         <label for="username" class="label">Nazwa użytkownika</label>
         <input id="username" type="text" formControlName="username" class="input">
     </div>
+    <div *ngIf="(loginForm.get('username').dirty || loginForm.get('username').touched) && loginForm.get('username').invalid && loginForm.get('username').errors.required">
+        To pole jest wymagane, nie może pozostać puste!
+    </div>
     <div>
         <label for="password" class="label">Hasło</label>
         <input id="password" type="password" formControlName="password" class="input">
     </div>
+    <div *ngIf="(loginForm.get('password').dirty || loginForm.get('password').touched) && loginForm.get('password').invalid && loginForm.get('password').errors.required">
+        To pole jest wymagane, nie może pozostać puste!
+    </div>
     <br>
-    <button class="button" type = "submit">Zaloguj</button>
+    <button class="button" type = "submit" [disabled]="!loginForm.valid">Zaloguj</button>
 
     <p>Nie masz konta ? <a href="registration"> Zarejestruj się</a></p>
 </form>

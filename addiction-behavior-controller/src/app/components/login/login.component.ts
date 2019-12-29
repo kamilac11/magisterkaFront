@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -19,8 +19,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      username: '',
-      password: '',
+      username: new FormControl('', Validators.required),
+      password: new FormControl('',Validators.required) 
     })
   }
 
@@ -34,6 +34,9 @@ export class LoginComponent implements OnInit {
 
     if(this.f.username.value == 'admin' && this.f.password.value == 'admin'){
         this.route.navigate(['admin']);
+    }
+    else if(this.loginForm.valid){
+      this.route.navigate(['activityPanel']);
     }
 
   }

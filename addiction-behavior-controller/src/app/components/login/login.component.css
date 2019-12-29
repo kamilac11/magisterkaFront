@@ -35,3 +35,6 @@ form label {
    margin-right: 35%;
 }
 
+.ng-invalid.ng-touched:not(form) {
+    border-color: red;
+}
