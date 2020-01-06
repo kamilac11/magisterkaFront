@@ -5,6 +5,8 @@ import { AllUserAdminComponent } from './components/all-user-admin/all-user-admi
 import { RegisterComponent } from './components/register/register.component';
 import { TestFormComponent } from './components/test-form/test-form.component';
 import { ActivityPanelComponent } from './components/activity-panel/activity-panel.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { AppInfoComponent } from './components/app-info/app-info.component';
 
 
 const routes: Routes = [
@@ -13,7 +15,9 @@ const routes: Routes = [
   { path: 'admin', component: AllUserAdminComponent},
   { path: 'registration', component: RegisterComponent},
   { path: 'test', component: TestFormComponent},
-  { path: 'activityPanel', component: ActivityPanelComponent} 
+  { path: 'activityPanel', component: ActivityPanelComponent}, 
+  { path: 'myProfile', component: UserProfileComponent},
+  { path: 'infoOaplikacji', component: AppInfoComponent }
 ];
 
 @NgModule({

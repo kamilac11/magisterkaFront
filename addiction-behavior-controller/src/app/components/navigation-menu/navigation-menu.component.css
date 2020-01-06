@@ -1,0 +1,52 @@
+#nav-bar {
+    background-color: #67c744 ;
+    position: fixed;
+    z-index: 1;
+    /* padding: 1em; */
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+}
+   
+/* lista ul */
+.menuList { 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* background-color:  #67c744; */
+
+  }
+  
+.rightSide{
+   float: right; 
+   padding: 10px;
+}
+
+.leftSide{
+    float: left;
+    padding: 10px;
+}
+
+nav li {
+    color:white;
+    display: inline;
+    text-align: center;
+}
+
+/* linki zawarte w ul li */
+nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* #nav-bar li a:hover{
+    background-color: #509636;
+} */
+
+/* dodac reakcje na klik - by caly blok zmienial kolor nie tylko tekst */
+
+.nav-link:hover {
+    /* background-color:#509636 ; */
+}

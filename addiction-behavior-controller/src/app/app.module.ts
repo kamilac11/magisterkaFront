@@ -9,6 +9,10 @@ import { ActivityPanelComponent } from './components/activity-panel/activity-pan
 import { AllUserAdminComponent } from './components/all-user-admin/all-user-admin.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TestFormComponent } from './components/test-form/test-form.component';
+import { ActivityFormComponent } from './components/activity-form/activity-form.component';
+import { NavigationMenuComponent } from './components/navigation-menu/navigation-menu.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { AppInfoComponent } from './components/app-info/app-info.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { TestFormComponent } from './components/test-form/test-form.component';
     RegisterComponent,
     ActivityPanelComponent,
     AllUserAdminComponent,
-    TestFormComponent
+    TestFormComponent,
+    ActivityFormComponent,
+    NavigationMenuComponent,
+    UserProfileComponent,
+    AppInfoComponent
   ],
   imports: [
     BrowserModule,
